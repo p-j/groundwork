@@ -3,12 +3,12 @@
   padding:$gutter;
   font-size:1.5em;
   text-align:center;
-  color:$button-text;
-  &:nth-child(1) { background:$asphalt; }
-  &:nth-child(2) { background:$blue; }
-  &:nth-child(3) { background:$purple; }
-  &:nth-child(4) { background:$yellow; }
-  &:nth-child(5) { background:$orange; }
+  color: #34495e;
+  &:nth-child(1) { background: #34495e; }
+  &:nth-child(2) { background: #3498db; }
+  &:nth-child(3) { background: #9b59b6; }
+  &:nth-child(4) { background: #f1c40f; }
+  &:nth-child(5) { background: #e67e22; }
 }
 
 .demo {
@@ -44,6 +44,5 @@
     background:lighten(gray, 45%);
     border:1px dashed lighten(gray, 35%);
     margin-top:-1px;
-    @include drop-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
   }
 }

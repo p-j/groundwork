@@ -1,37 +1,8 @@
 $root_path: '../../';
 @import "../../../src/scss/core/all";
 @import "../../../src/scss/base/all";
-@import "../../../src/scss/type/all";
-// @import "../../../src/scss/nav/all";
-// @import "../../../src/scss/ui/all";
-// @import "../../../src/scss/form/all";
-// @import "../../../src/scss/misc/all";
 
 @import "demo";
-
-
-$helpers: inline block 
-          zero 
-          pull-right pull-left 
-          bordered border-right border-left border-top border-bottom 
-          align-top align-right align-bottom align-left align-center justify 
-          truncate 
-          center 
-          disabled 
-          spacer 
-          round 
-          rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr 
-          spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
-
-@for $i from 1 through length($helpers) {
-  .extend-#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }
-
-  // interpolated mixin/function calls not currently supported
-  // .include-#{nth($helpers, $i)} { @include _#{nth($helpers, $i)}; }
-
-  // proposed syntax with be something like: @call or @invoke
-  // .include-#{nth($helpers, $i)} { @call _#{nth($helpers, $i)}; }
-}
 
 
 $spacers: padded pad-top pad-right pad-bottom pad-left 
@@ -45,11 +16,6 @@ $modifiers: double triple;
       &.extend-#{nth($modifiers, $i)} { @extend %#{nth($modifiers, $i)}; }
     }
   }
-  // interpolated mixin/function calls not currently supported
-  // .include-#{nth($helpers, $i)} { @include _#{nth($helpers, $i)}; }
-
-  // proposed syntax with be something like: @call or @invoke
-  // .include-#{nth($helpers, $i)} { @call _#{nth($helpers, $i)}; }
 }
 
 
@@ -96,62 +62,3 @@ $modifiers: double triple;
 .include-gap-left           { @include _gap-left; }
 .include-gap-left-double    { @include _gap-left(2); }
 .include-gap-left-triple    { @include _gap-left(3); }
-
-.include-inline           { @include _inline; }
-.include-block            { @include _block; }
-
-.include-zero             { @include _zero; }
-
-.include-pull-right       { @include _pull-right; }
-.include-pull-left        { @include _pull-left; }
-
-.include-bordered         { @include _bordered; }
-.include-border-top       { @include _border-top; }
-.include-border-right     { @include _border-right; }
-.include-border-bottom    { @include _border-bottom; }
-.include-border-left      { @include _border-left; }
-
-.include-align-top        { @include _align-top; }
-.include-align-right      { @include _align-right; }
-.include-align-bottom     { @include _align-bottom; }
-.include-align-left       { @include _align-left; }
-.include-align-center     { @include _align-center; }   
-.include-justify          { @include _justify; }
-
-.include-truncate         { @include _truncate; }
-
-.include-center           { @include _center; }
-
-.include-spacer           { @include _spacer; }
-
-.include-round            { @include _round; }
-
-.include-disabled         { @include _disabled; }
-
-.include-rotate-90        { @include _rotate-90; }
-.include-rotate-180       { @include _rotate-180; }
-.include-rotate-270       { @include _rotate-270; }
-.include-rotate-90-ctr    { @include _rotate-90-ctr; }
-.include-rotate-180-ctr   { @include _rotate-180-ctr; }
-.include-rotate-270-ctr   { @include _rotate-270-ctr; }
-
-.include-spin             { @include _spin; }
-.include-spin-once        { @include _spin-once; }
-.include-spin-twice       { @include _spin-twice; }
-.include-spin-thrice      { @include _spin-thrice; }
-.include-spin-fast        { @include _spin-fast; }
-.include-spin-fast-once   { @include _spin-fast-once; }
-.include-spin-fast-twice  { @include _spin-fast-twice; }
-.include-spin-fast-thrice { @include _spin-fast-thrice; }
-.include-spin-slow        { @include _spin-slow; }
-.include-spin-slow-once   { @include _spin-slow-once; }
-.include-spin-slow-twice  { @include _spin-slow-twice; }
-.include-spin-slow-thrice { @include _spin-slow-thrice; }
-
-.include-stick            { @include _stick; }
-.include-stick-top        { @include _stick(top); }
-.include-stick-right      { @include _stick(right); }
-.include-stick-bottom     { @include _stick(bottom); }
-.include-stick-left       { @include _stick(left); }
-.include-stick-middle     { @include _stick(middle); }
-.include-stick-center     { @include _stick(center); }
