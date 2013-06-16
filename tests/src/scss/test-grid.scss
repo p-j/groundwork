@@ -10,3 +10,25 @@ $list: container row one third two three fifths right-one left-one right-two lef
 @each $item in $list {
   .extend-#{$item} { @extend %#{$item} !optional; }
 }
+
+%demo {
+  @extend %padded;
+  border: 1px dashed #e0e0e0;
+  background: #f9f9f9;
+}
+
+article {
+  @extend %row;
+}
+
+section {
+  @extend %two, %thirds, %demo;
+}
+
+aside {
+  @extend %one, %third, %demo;
+}
+
+%column {
+  @extend %demo;
+}
