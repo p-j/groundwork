@@ -27,14 +27,11 @@ module.exports = (grunt) ->
         options:
           config: 'config.rb'
           trace: true
-      tests:
-        options:
-          config: 'tests/config.rb'
 
     jade:
       tests:
         files:
-          'tests/test-grid.html':         ['tests/src/jade/test-grid.jade']
+          'test.html':         ['src/jade/test.jade']
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -43,4 +40,4 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default',           ['watch']
   grunt.registerTask 'build',             ['coffee', 'compass:groundwork']
-  grunt.registerTask "tests",             ['compass:tests', 'jade:tests']
+  grunt.registerTask "tests",             ['compass', 'jade:tests']

@@ -1,7 +1,7 @@
 {
   "name": "GroundworkCSS",
-  "title": "GroundworkCSS",
-  "description": "A responsive, fractions-based, nestable, fluid grid system created by [@ghepting] ",
+  "title": "GroundworkCSS Stand-Alone Grid",
+  "description": "A responsive and adaptive, fractions-based, nestable, fluid grid system created by [@ghepting]",
   "keywords": [
     "groundworkcss",
     "groundwork",
@@ -12,7 +12,7 @@
     "sass",
     "scss"
   ],
-  "version": "0.1.0",
+  "version": "0.3.0-grid",
   "author": {
     "name": "Gary Hepting",
     "url": "http://groundworkcss.github.com"
