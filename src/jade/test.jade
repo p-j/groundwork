@@ -2,6 +2,8 @@
 html
   head
     link(rel='stylesheet', href='css/test.css')
+    script(type="text/javascript", src="js/libs/jquery-1.9.1.min.js")
+    script(type="text/javascript", src="js/components/equalizeColumns.js")
   body
     h1 Semantic Grid Implementations
     article
@@ -21,6 +23,18 @@ html
         h1 Two mobile thirds
       aside.mobile
         h1 One mobile third
+    h1 Equal Height Columns (Multiple Columns)
+    .row.equalize
+      .one.third
+        p Column with not that much content
+      .one.third
+        p Column with a little bit more placeholder content, but not all that much. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .one.third
+        p Column with a ton of placeholder content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h1 Equal Height Columns (Single Column)
+    .row.equalize
+      .one.whole
+        p Column with a ton of placeholder content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     h1 Grid Adapters
     h3 Mobile Grid Adapter
     .row
