@@ -12,39 +12,25 @@ module.exports = (grunt) ->
         tasks: ['compass:build', 'autoprefixer:build']
       coffee:
         files: '**/*.coffee'
-        tasks: ['coffee:build', 'concat:build']
-      concat:
-       files: ['js/plugins/jquery.cycle2.js',
-               'js/plugins/jquery.magnific-popup.js']
-       tasks: ['concat:build']
+        tasks: ['coffee']
 
     jade:
       build:
         files:
           'pages/home.html':              ['src/jade/home.jade']
-          'pages/layout-1.html':          ['src/jade/layout-1.jade']
-          'pages/layout-2.html':          ['src/jade/layout-2.jade']
-          'pages/layout-3.html':          ['src/jade/layout-3.jade']
-          'pages/layout-4.html':          ['src/jade/layout-4.jade']
-          'pages/layout-5.html':          ['src/jade/layout-5.jade']
-          'pages/layout-6.html':          ['src/jade/layout-6.jade']
-          'pages/layout-7.html':          ['src/jade/layout-7.jade']
+          'pages/layout-a.html':          ['src/jade/layout-a.jade']
+          'pages/layout-b.html':          ['src/jade/layout-b.jade']
+          'pages/layout-c.html':          ['src/jade/layout-c.jade']
           'pages/grid.html':              ['src/jade/grid.jade']
           'pages/helpers.html':           ['src/jade/helpers.jade']
           'pages/typography.html':        ['src/jade/typography.jade']
+          'pages/navigation.html':           ['src/jade/navigation.jade']
           'pages/buttons.html':           ['src/jade/buttons.jade']
-          'pages/navigation.html':        ['src/jade/navigation.jade']
           'pages/ui-elements.html':       ['src/jade/ui-elements.jade']
           'pages/tables.html':            ['src/jade/tables.jade']
-          'pages/tabs.html':              ['src/jade/tabs.jade']
-          'pages/tooltips.html':          ['src/jade/tooltips.jade']
           'pages/forms.html':             ['src/jade/forms.jade']
-          'pages/tiles.html':             ['src/jade/tiles.jade']
           'pages/icons.html':             ['src/jade/icons.jade']
-          'pages/social-icons.html':      ['src/jade/social-icons.jade']
           'pages/responsive-text.html':   ['src/jade/responsive-text.jade']
-          'pages/modals.html':            ['src/jade/modals.jade']
-          'pages/cycle2.html':            ['src/jade/cycle2.jade']
         options:
           pretty: true
       tests:
@@ -72,15 +58,12 @@ module.exports = (grunt) ->
     autoprefixer:
       build:
         options:
-          browsers: ['last 2 versions', 'ie 8', 'ie 7']
+          browsers: ['last 2 versions']
         files:
-          'css/groundwork.css':       ['css/groundwork.css']
-          'css/social-icons-svg.css': ['css/social-icons-svg.css']
-          'css/social-icons-png.css': ['css/social-icons-png.css']
-          'css/no-svg.css':           ['css/no-svg.css']
+          'css/groundwork.css': ['css/groundwork.css']
       tests:
         options:
-          browsers: ['last 2 versions', 'ie 8', 'ie 7']
+          browsers: ['last 2 versions']
         files:
           'tests/css/test-buttons.css':                   ['tests/css/test-buttons.css']
           'tests/css/test-conditional-helpers.css':       ['tests/css/test-conditional-helpers.css']
@@ -94,26 +77,20 @@ module.exports = (grunt) ->
           'tests/css/test-unresponsive-ui-elements.css':  ['tests/css/test-unresponsive-ui-elements.css']
 
     coffee:
-      build:
-        individual:
-          expand: true
-          cwd: 'src/coffee'
-          src: ['components/*.coffee', 'plugins/*.coffee']
-          dest: 'js'
-          ext: '.js'
-        concatenated:
-          options:
-            join: true
-          files:
-            "js/groundwork.all.js": ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
-
-    concat:
-      build:
-        src: ['js/groundwork.all.js', 'js/plugins/jquery.cycle2.js', 'js/plugins/jquery.magnific-popup.js']
-        dest: 'js/groundwork.all.js'
+      individual:
+        expand: true
+        cwd: 'src/coffee'
+        src: ['components/*.coffee', 'plugins/*.coffee']
+        dest: 'js'
+        ext: '.js'
+      concatenated:
+        options:
+          join: true
+        files:
+          "js/groundwork.all.js": ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
 
     uglify:
-      build:
+      minify:
         files:
           'js/groundwork.all.js': ['js/groundwork.all.js']
 
@@ -129,12 +106,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-compass'
-  grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-autoprefixer'
 
   grunt.registerTask 'default',           ['watch']
-  grunt.registerTask 'build',             ['jade:build', 'coffee:build', 'concat:build', 'compass:build', 'autoprefixer:build']
+  grunt.registerTask 'build',             ['jade:build', 'compass:build', 'autoprefixer:build', 'coffee']
   grunt.registerTask 'minify',            ['cssmin', 'uglify']
   grunt.registerTask "tests",             ['jade:tests', 'compass:tests', 'autoprefixer:tests']

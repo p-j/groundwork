@@ -1,9 +1,9 @@
 // =============================================
 //                   iPad
-//          Last Updated:2013-6-25
+//          Last Updated:2013-8-16
 // =============================================
 
-
+$responsive: true !default;
 
 
 @mixin ipad {
@@ -102,7 +102,6 @@
         .inline-ipad          { @include _inline; }
         .block-ipad           { @include _block; }
         .clear-ipad           { @include _clear; }
-        .disabled-ipad        { @include _disabled; }
         .center-ipad          { @include _center; }
         .pull-right-ipad      { @include _pull-right; }
         .pull-left-ipad       { @include _pull-left; }
@@ -141,6 +140,8 @@
 //       ipad        //
 ///////////////////////
 
-@include ipad {
-  // do not remove -- required for ipad helpers
+@if $responsive {
+  @include ipad {
+    // do not remove -- required for ipad helpers
+  }
 }

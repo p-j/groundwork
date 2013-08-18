@@ -1,6 +1,6 @@
 // =============================================
 //              Custom Settings
-//          Last Updated:2013-6-24
+//          Last Updated:2013-8-16
 // =============================================
 
 
@@ -51,7 +51,6 @@
 // $layout-classes:      true;       // enable output of layout helpers     (recommended)
 // $layout-helpers:      inline block
 //                       hidden
-//                       disabled
 //                       zero
 //                       pull-right pull-left clear
 //                       center;
@@ -77,26 +76,6 @@
 // $rotation-classes:    true;       // enable output of rotational helpers (optional)
 // $rotation-helpers:    rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
 
-// animations
-// $spin-animations:     true;       // enable output of spin animations        (optional)
-// $spin-helpers:        spin spin-once spin-twice spin-thrice
-//                       spin-fast spin-fast-once spin-fast-twice spin-fast-thrice
-//                       spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
-// $bounce-animations:     true;     // enable output of bounce animations      (optional)
-// $fade-animations:       true;     // enable output of fade animations        (optional)
-// $flash-animations:      true;     // enable output of flash animations       (optional)
-// $flip-animations:       true;     // enable output of flip animations        (optional)
-// $hinge-animations:      true;     // enable output of hinge animations       (optional)
-// $lightspeed-animations: true;     // enable output of lightspeed animations  (optional)
-// $pulse-animations:      true;     // enable output of pulse animations       (optional)
-// $roll-animations:       true;     // enable output of roll animations        (optional)
-// $rotate-animations:     true;     // enable output of rotate animations      (optional)
-// $shake-animations:      true;     // enable output of shake animations       (optional)
-// $swing-animations:      true;     // enable output of swing animations       (optional)
-// $tada-animations:       true;     // enable output of tada animations        (optional)
-// $wiggle-animations:     true;     // enable output of wiggle animations      (optional)
-// $wobble-animations:     true;     // enable output of wobble animations      (optional)
-
 // spacers
 // $spacer-classes:      true;       // enable output of spacer helpers     (recommended)
 // $spacer-helpers:      padded pad-top pad-right pad-bottom pad-left
@@ -108,8 +87,8 @@
 // $spacer-modifiers:    double triple;
 
 // states
-// $ui-states:           disabled info alert warning error success;
-// $button-states:       on active disabled info alert warning error success;
+// $ui-states:           info alert warning error success;
+// $button-states:       on active info alert warning error success;
 
 // typography
 // $type-tags:           true;       // enable output of type selectors     (recommended)
@@ -135,31 +114,17 @@
 //                       unstyled;
 // $styled-lists:        true;       // enable output of styled lists       (optional)
 
-// webfonts
-// $webfont-classes:     true;       // enable output of webfont classes    (optional)
-
 // buttons
 // $button-tags:         true;       // enable output of button selectors   (recommended)
 // $button-classes:      true;       // enable output of button classes     (recommended)
 // $button-modifiers:    small large on active square round block;
-
-// navigation
-// $nav-tags:            true;       // enable output of nav selectors      (optional)
-// $nav-classes:         true;
-
-// tabs
-// $tab-classes:         true;       // enable output of tab classes        (optional)
 
 // forms
 // $form-tags:           true;       // enable output of form selectors     (recommended)
 // $form-classes:        false;      // enable output of form classes       (optional)
 // $form-elements:       fieldset legend label input textarea;
 
-// tiles
-// $tiles:               true;       // enable output of tile classes       (optional)
-// $tile-modifiers:      on active small large square round disabled;
-
-// message & callout boxes
+// message boxes
 // $ui-classes:          true;
 // $ui-modifiers:        dismissible;
 
@@ -176,8 +141,8 @@
 ///////////////////////
 
 // typography
-$base-font-size:      14px;        // base font size for Compass vertical rhythm
-$base-line-height:    18px;        // base line height for Compass vertical rhythm
+// $font-size:      14px;
+// $line-height:    1.5;
 // $font-family:         Helvetica, Arial, Geneva, sans-serif;
 
 
@@ -185,12 +150,13 @@ $base-line-height:    18px;        // base line height for Compass vertical rhyt
 //     web fonts     //
 ///////////////////////
 
+// webfonts
+// $webfont-classes:     true;       // enable output of webfont classes    (optional)
+
 // font names (no spaces or special characters, these are used to build selectors)
-// $web-font-names:      AverageSans,
-//                       AmericanTypewriter;
+// $web-font-names:      pacifico;
 // font files (must all be named the same as listed below and include .eot, .woff and .ttf file types)
-// $web-font-files:      average-sans-webfont,
-//                       americantypewriterstd-bold;
+// $web-font-files:      pacifico;
 
 
 ///////////////////////
@@ -277,48 +243,3 @@ $base-line-height:    18px;        // base line height for Compass vertical rhyt
 // $modifier-name:       "green"   "blue"   "purple"   "yellow"   "orange"   "red"   "pink"   "turquoise"   "asphalt" ;
 // $modifier-code:       $green    $blue    $purple    $yellow    $orange    $red    $pink    $turquoise    $asphalt  ;
 // $modifier-text:       $white    $white   $white     $white     $white     $white  $white   $white        $white    ;
-
-
-///////////////////////
-//      modals       //
-///////////////////////
-
-// overlay
-// $overlay-color:                   #0b0b0b;                    // Color of overlay screen
-// $overlay-opacity:                 0.5;                        // Opacity of overlay screen
-// $shadow:                          0 0 8px rgba(0, 0, 0, 0.6); // Shadow on image or iframe
-
-// spacing
-// $popup-padding-left:              8px;                        // Padding from left and from right side
-// $popup-padding-left-mobile:       6px;                        // Same as above, but is applied when width of window is less than 800px
-
-// $z-index-base:                    500;                        // Base z-index of popup
-
-// controls
-// $include-arrows:                  true;                       // Include styles for nav arrows
-// $controls-opacity:                0.65;                       // Opacity of controls
-// $controls-color:                  #FFF;                       // Color of controls
-// $inner-close-icon-color:          #333;                       // Color of close button when inside
-// $controls-text-color:             #CCC;                       // Color of preloader and '1 of X' indicator
-// $controls-text-color-hover:       #FFF;                       // Hover color of preloader and '1 of X' indicator
-// $IE7support:                      true;                       // Very basic IE7 support
-
-// Inline-type options
-// $modal-max-width:                 $max-width;                 // Maximum width of inline modals
-
-// Iframe-type options
-// $include-iframe-type:             true;                       // Enable Iframe-type popups
-// $iframe-padding-top:              ($gutter*4);                // Iframe padding top
-// $iframe-background:               #000;                       // Background color of iframes
-// $iframe-max-width:                $max-width;                 // Maximum width of iframes
-// $iframe-ratio:                    9/16;                       // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
-
-// Image-type options
-// $include-image-type:              true;                       // Enable Image-type popups
-// $image-padding-top:               ($gutter*4);                // Image padding top
-// $image-padding-bottom:            ($gutter*4);                // Image padding bottom
-// $include-mobile-layout-for-image: true;                       // Removes paddings from top and bottom
-
-// Image caption options
-// $caption-title-color:             #F3F3F3;                    // Caption title color
-// $caption-subtitle-color:          #BDBDBD;                    // Caption subtitle color

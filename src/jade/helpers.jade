@@ -18,16 +18,18 @@ block title
 block content
   .container
     .pad-left.pad-right
-      h1.AverageSans.zero Conditional Content Helpers
+      h1.zero Conditional Content Helpers
       p Conditionally show and hide elements for specific viewport sizes.
       .row
         .one.whole.padded
-          ol.list.large
-            li.green.desktop-only Desktop only
-            li.blue.hide-on-desktop Hide on desktop
-            li.green.ipad-only iPad only
-            li.blue.hide-on-ipad Hide on iPad
-            li.green.small-tablet-only Small-tablet only
-            li.blue.hide-on-small-tablet Hide on small-tablet
-            li.green.mobile-only Mobile only
-            li.blue.hide-on-mobile Hide on mobile
+          .responsive(data-compression='17', data-max='40')
+            .padded
+              ol.list.large
+                li.green.desktop-only Desktop only
+                li.blue.hide-on-desktop Hide on desktop
+                li.green.ipad-only iPad only
+                li.blue.hide-on-ipad Hide on iPad
+                li.green.small-tablet-only Small-tablet only
+                li.blue.hide-on-small-tablet Hide on small-tablet
+                li.green.mobile-only Mobile only
+                li.blue.hide-on-mobile Hide on mobile

@@ -6,26 +6,25 @@ block title
 block content
   .container
     .pad-left.pad-right
-      h1.AverageSans.zero Forms
+      h1.zero Forms
       .row
         .one.whole.padded
           form(action='#', method='post')
             fieldset
-              legend Example Form
+              legend Example HTML5 Form
               .row
-                .one.whole.padded
-                  label(for='name') First & Last Name
+                .one.half.padded
+                  label(for='name') Text Field
                   input#name(type='text', placeholder='First & Last Name')
-              .row
-                .one.whole.padded
-                  label(for='email') Email Address
+                .one.half.padded
+                  label(for='email') Email Field
                   input#email(type='email', placeholder='you@example.com')
               .row
                 .one.whole.padded
                   label(for='address') Address
                   input#address(type='text', placeholder='Street Address')
               .row
-                .one.half.padded
+                .two.fourths.padded
                   input(type='text', placeholder='City')
                 .one.fourth.padded
                   span.select-wrap
@@ -116,25 +115,25 @@ block content
                   label(for='message') Special Instructions
                   textarea#message(placeholder='Enter your message...')
               .row
-                .one.whole.padded
-                  label(for='twitter') Twitter
+                .one.whole.pad-left
+                  label(for='twitter') Prefixed & Suffixed
+              .row
+                .one.half.padded
                   .row
-                    .one.half.pad-right.gap-bottom.no-pad-small-tablet
-                      .row
-                        .one.mobile.sixth
-                          span.prefix @
-                        .five.mobile.sixths
-                          input#twitter(type='text', name='twitter', placeholder='username')
-                    .one.half.pad-left.gap-bottom.no-pad-small-tablet
-                      .row
-                        .three.mobile.fifths
-                          input(type='text', name='sidereel', placeholder='pick username')
-                        .two.mobile.fifths
-                          span.suffix @example.com
+                    .one.mobile.sixth
+                      span.prefix @
+                    .five.mobile.sixths
+                      input#twitter(type='text', name='twitter', placeholder='twitter handle')
+                .one.half.padded
+                  .row
+                    .three.mobile.fifths
+                      input(type='text', name='sidereel', placeholder='desired username')
+                    .two.mobile.fifths
+                      span.suffix @example.com
               .row
                 .one.whole.padded
-                  | Pick a thing:
-                  ul.radio-list
+                  label(for='thing1') Radio Buttons:
+                  ul.unstyled.zero
                     li
                       input#thing1(type='radio', name='things', checked='')
                       label.inline(for='thing1') Thing one
@@ -143,60 +142,21 @@ block content
                       label.inline(for='thing2') Thing two
               .row
                 .one.whole.padded
-                  button Submit
-                  |  
-                  button.warning Cancel
-              .row
-                .one.whole.padded
-                  input(type='submit')
-                  |  
-                  input.warning(type='reset')
-              .row
-                .double.padded
-                  h6 Small
-                  a.small.button(href='#') Link
-                  |  
-                  button.small Button
-                  |  
-                  input.small(type='submit')
-                  |  
-                  input.small.warning(type='reset')
-                  hr
-                  h6 Normal
-                  a.button(href='#') Link
-                  |  
-                  button Button
-                  |  
-                  input(type='submit')
-                  |  
-                  input.warning(type='reset')
-                  hr
-                  h6 Large
-                  a.large.button(href='#') Link
-                  |  
-                  button.large Button
-                  |  
-                  input.large(type='submit')
-                  |  
-                  input.large.warning(type='reset')
-              .row
-                .one.whole.padded
-                  input(type='checkbox', name='things', checked='')
-                  | I want all the things!
-          .row
-            .one.whole.padded
+                  input#allthings(type='checkbox', name='things', checked='')
+                  label.inline(for='allthings')  I want all the things!
+          .row.gap-top
+            .one.half.padded
+              h4 Invalid Entry
               p.invalid
-                label Invalid entry field label
                 input(value='Invalid entry')
               .invalid.row
                 .one.mobile.tenth
                   span.prefix @
                 .nine.mobile.tenths
                   input(value='Invalid entry')
-          .row
-            .one.whole.padded
+            .one.half.padded
+              h4 Validated Entry
               p.valid
-                label Valid entry field label
                 input(value='Valid entry')
               .valid.row
                 .one.mobile.tenth

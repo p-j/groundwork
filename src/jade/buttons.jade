@@ -6,14 +6,14 @@ block title
 block content
   .container
     .pad-left.pad-right
-      h1.AverageSans.zero Buttons
+      h1.zero Buttons
       p Clean, accessible and easy to customize buttons.
     .row
       .one.whole.padded
         h2.AmericanTypewriter Buttons
         .row
           .one.third.padded
-            h4.AverageSans Button Sizes
+            h4 Button Sizes
             p
               button.small Small Button
             p
@@ -21,7 +21,7 @@ block content
             p
               button.large Large Button
           .one.third.padded
-            h4.AverageSans Button Types
+            h4 Button Types
             p
               button Normal Button
             p
@@ -35,7 +35,7 @@ block content
             p
               button.error Error Button
           .one.third.padded
-            h4.AverageSans Button Styles
+            h4 Button Styles
             p
               button Normal Button
             p
@@ -47,21 +47,21 @@ block content
         h2.AmericanTypewriter Button States
         .row
           .one.third.padded
-            h4.AverageSans Disabled
+            h4 Normal
             p
-              button.disabled(tabindex='-1') Disabled Button
+              button Active Button
             p
-              button.info.disabled Disabled Info
+              button.info Active Info
             p
-              button.success.disabled Disabled Success
+              button.success Active Success
             p
-              button.alert.disabled Disabled Alert
+              button.alert Active Alert
             p
-              button.warning.disabled Disabled Warning
+              button.warning Active Warning
             p
-              button.error.disabled Disabled Error
+              button.error Active Error
           .one.third.padded
-            h4.AverageSans Active
+            h4 Active
             p
               button.active Active Button
             p
@@ -75,43 +75,49 @@ block content
             p
               button.error.active Active Error
           .one.third.padded
-            h4.AverageSans Colors
+            h4 Disabled
             p
-              button.yellow Yellow Button
+              button.disabled(tabindex='-1') Disabled Button
             p
-              button.orange Orange Button
+              button.info.disabled Disabled Info
             p
-              button.red Red Button
+              button.success.disabled Disabled Success
             p
-              button.pink Pink Button
+              button.alert.disabled Disabled Alert
             p
-              button.purple Purple Button
+              button.warning.disabled Disabled Warning
             p
-              button.asphalt Asphalt Button
-            p
-              button.blue Blue Button
-            p
-              button.turquoise Turquoise Button
-            p
-              button.green Green Button
+              button.error.disabled Disabled Error
+        h2.AmericanTypewriter Button Colors
+        .row
+          .one.whole
+            button.yellow.gap-right.gap-bottom Yellow Button
+            button.orange.gap-right.gap-bottom Orange Button
+            button.red.gap-right.gap-bottom Red Button
+            button.pink.gap-right.gap-bottom Pink Button
+            button.purple.gap-right.gap-bottom Purple Button
+            button.asphalt.gap-right.gap-bottom Asphalt Button
+            button.blue.gap-right.gap-bottom Blue Button
+            button.turquoise.gap-right.gap-bottom Turquoise Button
+            button.green.gap-right.gap-bottom Green Button
         h2.AmericanTypewriter Button Lists & Dropdowns
         .row
           .one.third.padded
             ul.button-list
               li
-                a(href='#') Button 1
+                a(href='#') Normal
               li
-                a(href='#') Button 2
+                a.disabled(href='#') Disabled
               li
-                a(href='#') Button 3
+                a.active(href='#') Active
             br
             ul.button-list
               li
-                a.blue(href='#') Button 1
+                a.blue(href='#') Normal
               li
-                a.turquoise(href='#') Button 2
+                a.turquoise.disabled(href='#') Disabled
               li
-                a.green(href='#') Button 3
+                a.green.active(href='#') Active
             br
           .one.third.padded
             ul.button-list
@@ -155,40 +161,40 @@ block content
                   i.icon-pinterest
             br
           .one.third.padded
-              .dropdown
-                button
-                  | Dropdown Menu Button
-                ul
-                  li
-                    a(href='#')
-                      i.icon-home
-                      |  Example Menu Item 1
-                  li
-                    a(href='#')
-                      i.icon-envelope-alt
-                      |  Example Menu Item 2
-                  li
-                    hr
-                  li
-                    a(href='#')
-                      i.icon-heart
-                      |  Seperated Menu Item
-              br
-              .dropdown.gap-top
-                button.blue
-                  | Dropdown Menu Button
-                ul
-                  li
-                    a(href='#')
-                      i.icon-home
-                      |  Example Menu Item 1
-                  li
-                    a(href='#')
-                      i.icon-envelope-alt
-                      |  Example Menu Item 2
-                  li
-                    hr
-                  li
-                    a(href='#')
-                      i.icon-heart
-                      |  Seperated Menu Item
+            .dropdown
+              button
+                | Dropdown Menu Button
+              ul
+                li
+                  a(href='#')
+                    i.icon-home
+                    |  Example Menu Item 1
+                li
+                  a(href='#')
+                    i.icon-envelope-alt
+                    |  Example Menu Item 2
+                li
+                  hr
+                li
+                  a(href='#')
+                    i.icon-heart
+                    |  Seperated Menu Item
+            br
+            .dropdown.gap-top
+              button.blue
+                | Dropdown Menu Button
+              ul
+                li
+                  a(href='#')
+                    i.icon-home
+                    |  Example Menu Item 1
+                li
+                  a(href='#')
+                    i.icon-envelope-alt
+                    |  Example Menu Item 2
+                li
+                  hr
+                li
+                  a(href='#')
+                    i.icon-heart
+                    |  Seperated Menu Item

@@ -6,13 +6,13 @@ block title
 block content
   .container
     .pad-left.pad-right
-      h1.AverageSans.zero Tables
+      h1.zero Tables
       p Clean and easy to customize styling for tabular data.
     .row
       .one.whole.padded
         .row
           .one.whole.padded
-            table.responsive.tooltip(title='responsive data table', data-max='15')
+            table.responsive(title='responsive data table', data-max='15')
               thead
                 tr
                   th Table Heading
@@ -46,48 +46,48 @@ block content
                   td Footer cell
                   td Footer cell
                   td Footer cell
+        //- .row
+        //-   .one.whole.padded
+        //-     table.responsive(title='responsive data table', data-max='15')
+        //-       thead
+        //-         tr
+        //-           th(data-width='40%') Table Heading
+        //-           th(data-width='20%') Table Heading
+        //-           th(data-width='20%') Table Heading
+        //-           th(data-width='20%') Table Heading
+        //-       tbody
+        //-         tr
+        //-           td(data-width='40%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-         tr
+        //-           td(data-width='40%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-         tr
+        //-           td(data-width='40%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-         tr
+        //-           td(data-width='40%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-       tfoot
+        //-         tr
+        //-           td(data-width='40%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
+        //-           td(data-width='20%') Table cell
         .row
-          .one.whole.padded
-            table.responsive.tooltip(title='responsive data table', data-max='15')
+          .one.fifth.padded
+            table.responsive.info(title='info', data-max='15')
               thead
                 tr
-                  th(data-width='40%') Table Heading
-                  th(data-width='20%') Table Heading
-                  th(data-width='20%') Table Heading
-                  th(data-width='20%') Table Heading
-              tbody
-                tr
-                  td(data-width='40%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                tr
-                  td(data-width='40%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                tr
-                  td(data-width='40%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                tr
-                  td(data-width='40%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-              tfoot
-                tr
-                  td(data-width='40%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-                  td(data-width='20%') Table cell
-        .row
-          .one.third.padded
-            table.responsive.yellow.tooltip(title='yellow', data-max='15')
-              thead
-                tr
-                  th Table Heading
+                  th Info Table
               tbody
                 tr
                   td Table cell
@@ -100,11 +100,11 @@ block content
               tfoot
                 tr
                   td Footer cell
-          .one.third.padded
-            table.responsive.orange.tooltip(title='orange', data-max='15')
+          .one.fifth.padded
+            table.responsive.success(title='success', data-max='15')
               thead
                 tr
-                  th Table Heading
+                  th Success Table
               tbody
                 tr
                   td Table cell
@@ -117,11 +117,11 @@ block content
               tfoot
                 tr
                   td Footer cell
-          .one.third.padded
-            table.responsive.red.tooltip(title='red', data-max='15')
+          .one.fifth.padded
+            table.responsive.alert(title='alert', data-max='15')
               thead
                 tr
-                  th Table Heading
+                  th Alert Table
               tbody
                 tr
                   td Table cell
@@ -134,12 +134,11 @@ block content
               tfoot
                 tr
                   td Footer cell
-        .row
-          .one.third.padded
-            table.responsive.pink.tooltip(title='pink', data-max='15')
+          .one.fifth.padded
+            table.responsive.warning(title='warning', data-max='15')
               thead
                 tr
-                  th Table Heading
+                  th Warning Table
               tbody
                 tr
                   td Table cell
@@ -152,28 +151,11 @@ block content
               tfoot
                 tr
                   td Footer cell
-          .one.third.padded
-            table.responsive.purple.tooltip(title='purple', data-max='15')
+          .one.fifth.padded
+            table.responsive.error(title='error', data-max='15')
               thead
                 tr
-                  th Table Heading
-              tbody
-                tr
-                  td Table cell
-                tr
-                  td Table cell
-                tr
-                  td Table cell
-                tr
-                  td Table cell
-              tfoot
-                tr
-                  td Footer cell
-          .one.third.padded
-            table.responsive.asphalt.tooltip(title='asphalt', data-max='15')
-              thead
-                tr
-                  th Table Heading
+                  th Error Table
               tbody
                 tr
                   td Table cell
@@ -188,10 +170,10 @@ block content
                   td Footer cell
         .row
           .one.third.padded
-            table.responsive.blue.tooltip(title='blue', data-max='15')
+            table.responsive.yellow(title='yellow', data-max='15')
               thead
                 tr
-                  th Table Heading
+                  th Yellow Table
               tbody
                 tr
                   td Table cell
@@ -205,10 +187,10 @@ block content
                 tr
                   td Footer cell
           .one.third.padded
-            table.responsive.turquoise.tooltip(title='turquoise', data-max='15')
+            table.responsive.orange(title='orange', data-max='15')
               thead
                 tr
-                  th Table Heading
+                  th Orange Table
               tbody
                 tr
                   td Table cell
@@ -222,10 +204,114 @@ block content
                 tr
                   td Footer cell
           .one.third.padded
-            table.responsive.green.tooltip(title='green', data-max='15')
+            table.responsive.red(title='red', data-max='15')
               thead
                 tr
-                  th Table Heading
+                  th Red Table
+              tbody
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+              tfoot
+                tr
+                  td Footer cell
+        .row
+          .one.third.padded
+            table.responsive.pink(title='pink', data-max='15')
+              thead
+                tr
+                  th Pink Table
+              tbody
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+              tfoot
+                tr
+                  td Footer cell
+          .one.third.padded
+            table.responsive.purple(title='purple', data-max='15')
+              thead
+                tr
+                  th Purple Table
+              tbody
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+              tfoot
+                tr
+                  td Footer cell
+          .one.third.padded
+            table.responsive.asphalt(title='asphalt', data-max='15')
+              thead
+                tr
+                  th Asphalt Table
+              tbody
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+              tfoot
+                tr
+                  td Footer cell
+        .row
+          .one.third.padded
+            table.responsive.blue(title='blue', data-max='15')
+              thead
+                tr
+                  th Blue Table
+              tbody
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+              tfoot
+                tr
+                  td Footer cell
+          .one.third.padded
+            table.responsive.turquoise(title='turquoise', data-max='15')
+              thead
+                tr
+                  th Turquoise Table
+              tbody
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+                tr
+                  td Table cell
+              tfoot
+                tr
+                  td Footer cell
+          .one.third.padded
+            table.responsive.green(title='green', data-max='15')
+              thead
+                tr
+                  th Green Table
               tbody
                 tr
                   td Table cell

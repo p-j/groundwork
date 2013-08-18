@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS &hearts; Responsive/Adaptive Grid System</title>
     <style type="text/css">
       .demo .row, .layout .row {
@@ -377,13 +377,6 @@
       }
       
     </style>
-    <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
     <!-- Modernizr -->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery -->
@@ -391,78 +384,38 @@
     <!-- framework css -->
     <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
     <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
-    <script type="text/javascript">
-      // extend Modernizr to have datauri test
-      (function(){
-        var datauri = new Image();
-        datauri.onerror = function() {
-          Modernizr.addTest('datauri', function () { return false; });
-        };
-        datauri.onload = function() {
-          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
-          Modernizr.load({
-            test: Modernizr.datauri,
-            nope: '../css/no-datauri.css'
-          });
-        };
-        datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-      })();
-      // SVG support?
-      Modernizr.load({
-        test: Modernizr.inlinesvg,
-        yep: [
-          '../css/social-icons-svg.css'
-        ],
-        nope: [
-          '../css/social-icons-png.css'
-        ]
-      });
-      // polyfill for HTML5 placeholders
-      Modernizr.load({
-        test: Modernizr.input.placeholder,
-        nope: [
-          '../css/placeholder_polyfill.min.css',
-          '../js/libs/placeholder_polyfill.jquery.js'
-        ]
-      });
-      
-    </script>
   </head>
   <body>
-    <header class="white band padded">
+    <header class="padded">
       <div class="container">
-        <h2 class="AverageSans">GroundworkCSS</h2>
-        <nav class="nav inline menu gap-top">
+        <h2>GroundworkCSS</h2>
+        <nav class="nav gap-top">
           <ul>
             <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
-            <li class="menu"><a href="#">Example Layouts</a>
+            <li><a href="#" class="active">Example Layouts</a>
               <ul>
-                <li><a href="./layout-1.html">Layout 1</a></li>
-                <li><a href="./layout-2.html">Layout 2</a></li>
-                <li><a href="./layout-3.html">Layout 3</a></li>
-                <li><a href="./layout-4.html">Layout 4</a></li>
-                <li><a href="./layout-5.html">Layout 5</a></li>
-                <li><a href="./layout-6.html">Image Gallery</a></li>
-                <li><a href="./layout-7.html">Ecommerce</a></li>
+                <li><a href="./layout-a.html">Web Page</a></li>
+                <li><a href="./layout-b.html">Image Gallery</a></li>
+                <li><a href="./layout-c.html">Ecommerce Page</a></li>
               </ul>
             </li>
-            <li class="menu"><a href="#">Example Components Usage</a>
+            <li><a href="#">Example Components Usage</a>
               <ul>
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
-                <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
-                <li><a href="./navigation.html" title="Navigation bars, button menus">Navigation</a></li>
-                <li><a href="./ui-elements.html" title="Message &amp; callout boxes">UI Elements</a></li>
-                <li><a href="./tooltips.html" title="Tooltips">Tooltips</a></li>
-                <li><a href="./tables.html" title="Tabs, message &amp; callout boxes, tables and tooltips">Tables</a></li>
+                <li><a href="#" title="Navigation, buttons, messages and tables">UI Elements</a>
+                  <ul>
+                    <li><a href="./navigation.html" title="Navigation">Navigation</a>
+                      <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
+                    </li>
+                    <li><a href="./ui-elements.html" title="Message blocks">Message Blocks</a></li>
+                    <li><a href="./tables.html" title="Tables">Tables</a></li>
+                  </ul>
+                </li>
                 <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
-                <li><a href="./tiles.html" title="Tiles">Tiles</a></li>
                 <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
-                <li><a href="./social-icons.html">Social Icons</a></li>
                 <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
-                <li><a href="./modals.html" title="Magnific Popup modals">Magnific Popup</a></li>
-                <li><a href="./cycle2.html" title="Cycle2 Slideshows">Cycle2</a></li>
               </ul>
             </li>
           </ul>
@@ -471,296 +424,296 @@
     </header>
     <div class="container">
       <div class="pad-left pad-right">
-        <h1 class="AverageSans zero">Grid</h1>
+        <h1 class="zero">Grid</h1>
         <p>Example usage of responsive grid system</p>
       </div>
       <div class="row">
         <div class="one whole padded">
-          <h4 class="AverageSans">Grid Helpers</h4>
+          <h4>Grid Helpers</h4>
           <div class="row">
             <div class="one fifth">
-              <p class="AverageSans">Desktop Grid (default)</p>
+              <p>Desktop Grid (default)</p>
             </div>
             <div class="four fifths">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
-                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
+                  <div title="class=&quot;one half&quot;" class="one half">1/2</div>
+                  <div title="class=&quot;one half&quot;" class="one half">1/2</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Small-Tablet Grid</p>
+              <p>Small-Tablet Grid</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one small-tablet half&quot;" class="one half small-tablet tooltip">1/2</div>
-                  <div title="class=&quot;one small-tablet half&quot;" class="one half small-tablet tooltip">1/2</div>
+                  <div title="class=&quot;one small-tablet half&quot;" class="one half small-tablet">1/2</div>
+                  <div title="class=&quot;one small-tablet half&quot;" class="one half small-tablet">1/2</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Mobile Grid</p>
+              <p>Mobile Grid</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one mobile half&quot;" class="one half mobile tooltip">1/2</div>
-                  <div title="class=&quot;one mobile half&quot;" class="one half mobile tooltip">1/2</div>
+                  <div title="class=&quot;one mobile half&quot;" class="one half mobile">1/2</div>
+                  <div title="class=&quot;one mobile half&quot;" class="one half mobile">1/2</div>
                 </div>
               </div>
             </div>
           </div><br>
           <hr>
-          <h4 class="AverageSans">Grid Adapters</h4>
+          <h4>Grid Adapters</h4>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Small-Tablet Adapters</p>
+              <p>Small-Tablet Adapters</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
-                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
-                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
-                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth two-up-small-tablet&quot;" class="one fourth two-up-small-tablet">1/4 to 2-up</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Mobile Adapters</p>
+              <p>Mobile Adapters</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
-                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
-                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
-                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile tooltip">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
+                  <div title="class=&quot;one fourth small-tablet two-up-mobile&quot;" class="one fourth small-tablet two-up-mobile">1/4 to 2-up</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Combined Adapters</p>
+              <p>Combined Adapters</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
-                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
-                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
-                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
-                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
-                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile tooltip">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
+                  <div title="class=&quot;one sixth three-up-small-tablet two-up-mobile&quot;" class="one sixth three-up-small-tablet two-up-mobile">1/6 to 3-up to 2-up</div>
                 </div>
               </div>
             </div>
           </div>
           <hr><br>
-          <h4 class="AverageSans">Grid Fractions</h4>
+          <h4>Grid Fractions</h4>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Halves</p>
+              <p>Halves</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
-                  <div title="class=&quot;one half&quot;" class="one half tooltip">1/2</div>
+                  <div title="class=&quot;one half&quot;" class="one half">1/2</div>
+                  <div title="class=&quot;one half&quot;" class="one half">1/2</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Thirds</p>
+              <p>Thirds</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one third&quot;" class="one third tooltip">1/3</div>
-                  <div title="class=&quot;one third&quot;" class="one third tooltip">1/3</div>
-                  <div title="class=&quot;one third&quot;" class="one third tooltip">1/3</div>
+                  <div title="class=&quot;one third&quot;" class="one third">1/3</div>
+                  <div title="class=&quot;one third&quot;" class="one third">1/3</div>
+                  <div title="class=&quot;one third&quot;" class="one third">1/3</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Fourths</p>
+              <p>Fourths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
-                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
-                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
-                  <div title="class=&quot;one fourth&quot;" class="one fourth tooltip">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth">1/4</div>
+                  <div title="class=&quot;one fourth&quot;" class="one fourth">1/4</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Fifths</p>
+              <p>Fifths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
-                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
-                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
-                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
-                  <div title="class=&quot;one fifth&quot;" class="one fifth tooltip">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth">1/5</div>
+                  <div title="class=&quot;one fifth&quot;" class="one fifth">1/5</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Sixths</p>
+              <p>Sixths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
-                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
-                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
-                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
-                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
-                  <div title="class=&quot;one sixth&quot;" class="one sixth tooltip">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth">1/6</div>
+                  <div title="class=&quot;one sixth&quot;" class="one sixth">1/6</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Sevenths</p>
+              <p>Sevenths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
-                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
-                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
-                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
-                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
-                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
-                  <div title="class=&quot;one seventh&quot;" class="one seventh tooltip">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh">1/7</div>
+                  <div title="class=&quot;one seventh&quot;" class="one seventh">1/7</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Eighths</p>
+              <p>Eighths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
-                  <div title="class=&quot;one eighth&quot;" class="one eighth tooltip">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
+                  <div title="class=&quot;one eighth&quot;" class="one eighth">1/8</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Ninths</p>
+              <p>Ninths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
-                  <div title="class=&quot;one ninth&quot;" class="one ninth tooltip">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
+                  <div title="class=&quot;one ninth&quot;" class="one ninth">1/9</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Tenths</p>
+              <p>Tenths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
-                  <div title="class=&quot;one tenth&quot;" class="one tenth tooltip">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
+                  <div title="class=&quot;one tenth&quot;" class="one tenth">1/10</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Elevenths</p>
+              <p>Elevenths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
-                  <div title="class=&quot;one eleventh&quot;" class="one eleventh tooltip">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
+                  <div title="class=&quot;one eleventh&quot;" class="one eleventh">1/11</div>
                 </div>
               </div>
             </div>
           </div><br>
           <div class="row">
             <div class="one fifth small-tablet">
-              <p class="AverageSans">Twelfths</p>
+              <p>Twelfths</p>
             </div>
             <div class="four fifths small-tablet">
               <div class="demo">
                 <div class="row">
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
-                  <div title="class=&quot;one twelfth&quot;" class="one twelfth tooltip">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
+                  <div title="class=&quot;one twelfth&quot;" class="one twelfth">1/12</div>
                 </div>
               </div>
             </div>
@@ -768,24 +721,20 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="message triple gap-top">
       <div class="container padded">
-        <div class="green callout">
-          <div class="row">
-            <div class="three fourths padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="orange button">Give me a shout <i class="icon-envelope-alt"></i></a> if you find it useful and have any feedback.</p>
-              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="red button">filing an issue <i class="icon-github"></i></a> on Github.</p>
-            </div>
-            <div class="one fourth padded">
-              <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-envelope"></i></a></p>
-            </div>
+        <div class="row">
+          <div class="three fourths padded">
+            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="red">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
+            <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="asphalt">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
+          </div>
+          <div class="one fourth padded">
+            <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="blue large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="asphalt large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="red large inline gapped"><i class="icon-envelope"></i></a></p>
           </div>
         </div>
       </div>
     </footer>
     <!-- scripts-->
-    <script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script>
-    <script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="../js/groundwork.all.js"></script>
     <!-- google analytics-->
     <script type="text/javascript">

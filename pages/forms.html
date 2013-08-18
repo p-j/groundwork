@@ -8,15 +8,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>GroundworkCSS &hearts; Forms</title>
-    <link rel="apple-touch-icon" href="../images/apple-icons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/apple-icons/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-icons/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-icons/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileImage" content="../images/apple-icons/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
     <!-- Modernizr -->
     <script src="../js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery -->
@@ -24,78 +17,38 @@
     <!-- framework css -->
     <link type="text/css" rel="stylesheet" href="../css/groundwork.css"><!--[if IE]>
     <link type="text/css" rel="stylesheet" href="../css/groundwork-ie.css"><![endif]-->
-    <script type="text/javascript">
-      // extend Modernizr to have datauri test
-      (function(){
-        var datauri = new Image();
-        datauri.onerror = function() {
-          Modernizr.addTest('datauri', function () { return false; });
-        };
-        datauri.onload = function() {
-          Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
-          Modernizr.load({
-            test: Modernizr.datauri,
-            nope: '../css/no-datauri.css'
-          });
-        };
-        datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-      })();
-      // SVG support?
-      Modernizr.load({
-        test: Modernizr.inlinesvg,
-        yep: [
-          '../css/social-icons-svg.css'
-        ],
-        nope: [
-          '../css/social-icons-png.css'
-        ]
-      });
-      // polyfill for HTML5 placeholders
-      Modernizr.load({
-        test: Modernizr.input.placeholder,
-        nope: [
-          '../css/placeholder_polyfill.min.css',
-          '../js/libs/placeholder_polyfill.jquery.js'
-        ]
-      });
-      
-    </script>
   </head>
   <body>
-    <header class="white band padded">
+    <header class="padded">
       <div class="container">
-        <h2 class="AverageSans">GroundworkCSS</h2>
-        <nav class="nav inline menu gap-top">
+        <h2>GroundworkCSS</h2>
+        <nav class="nav gap-top">
           <ul>
             <li><a href="./home.html"><i class="icon-home"></i> Home</a></li>
-            <li class="menu"><a href="#">Example Layouts</a>
+            <li><a href="#" class="active">Example Layouts</a>
               <ul>
-                <li><a href="./layout-1.html">Layout 1</a></li>
-                <li><a href="./layout-2.html">Layout 2</a></li>
-                <li><a href="./layout-3.html">Layout 3</a></li>
-                <li><a href="./layout-4.html">Layout 4</a></li>
-                <li><a href="./layout-5.html">Layout 5</a></li>
-                <li><a href="./layout-6.html">Image Gallery</a></li>
-                <li><a href="./layout-7.html">Ecommerce</a></li>
+                <li><a href="./layout-a.html">Web Page</a></li>
+                <li><a href="./layout-b.html">Image Gallery</a></li>
+                <li><a href="./layout-c.html">Ecommerce Page</a></li>
               </ul>
             </li>
-            <li class="menu"><a href="#">Example Components Usage</a>
+            <li><a href="#">Example Components Usage</a>
               <ul>
                 <li><a href="./grid.html" title="Responsive grid system, grid adapters and helpers">Grid</a></li>
                 <li><a href="./helpers.html" title="Layout helpers, spinners and much more">Helpers</a></li>
                 <li><a href="./typography.html" title="Text elements, quotes, code and web fonts">Typography</a></li>
-                <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
-                <li><a href="./navigation.html" title="Navigation bars, button menus">Navigation</a></li>
-                <li><a href="./ui-elements.html" title="Message &amp; callout boxes">UI Elements</a></li>
-                <li><a href="./tooltips.html" title="Tooltips">Tooltips</a></li>
-                <li><a href="./tables.html" title="Tabs, message &amp; callout boxes, tables and tooltips">Tables</a></li>
+                <li><a href="#" title="Navigation, buttons, messages and tables">UI Elements</a>
+                  <ul>
+                    <li><a href="./navigation.html" title="Navigation">Navigation</a>
+                      <li><a href="./buttons.html" title="Buttons, button groups, button menus">Buttons</a></li>
+                    </li>
+                    <li><a href="./ui-elements.html" title="Message blocks">Message Blocks</a></li>
+                    <li><a href="./tables.html" title="Tables">Tables</a></li>
+                  </ul>
+                </li>
                 <li><a href="./forms.html" title="Form elements">Form Elements</a></li>
-                <li><a href="./tiles.html" title="Tiles">Tiles</a></li>
                 <li><a href="./icons.html" title="Font Awesome icons">Font Awesome Icons</a></li>
-                <li><a href="./social-icons.html">Social Icons</a></li>
                 <li><a href="./responsive-text.html" title="Responsive text and multi-line text block truncation">Responsive Text</a></li>
-                <li><a href="./modals.html" title="Magnific Popup modals">Magnific Popup</a></li>
-                <li><a href="./cycle2.html" title="Cycle2 Slideshows">Cycle2</a></li>
               </ul>
             </li>
           </ul>
@@ -104,21 +57,19 @@
     </header>
     <div class="container">
       <div class="pad-left pad-right">
-        <h1 class="AverageSans zero">Forms</h1>
+        <h1 class="zero">Forms</h1>
         <div class="row">
           <div class="one whole padded">
             <form action="#" method="post">
               <fieldset>
-                <legend>Example Form</legend>
+                <legend>Example HTML5 Form</legend>
                 <div class="row">
-                  <div class="one whole padded">
-                    <label for="name">First & Last Name</label>
+                  <div class="one half padded">
+                    <label for="name">Text Field</label>
                     <input id="name" type="text" placeholder="First &amp; Last Name">
                   </div>
-                </div>
-                <div class="row">
-                  <div class="one whole padded">
-                    <label for="email">Email Address</label>
+                  <div class="one half padded">
+                    <label for="email">Email Field</label>
                     <input id="email" type="email" placeholder="you@example.com">
                   </div>
                 </div>
@@ -129,7 +80,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="one half padded">
+                  <div class="two fourths padded">
                     <input type="text" placeholder="City">
                   </div>
                   <div class="one fourth padded"><span class="select-wrap">
@@ -225,31 +176,32 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="one whole padded">
-                    <label for="twitter">Twitter</label>
+                  <div class="one whole pad-left">
+                    <label for="twitter">Prefixed & Suffixed</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="one half padded">
                     <div class="row">
-                      <div class="one half pad-right gap-bottom no-pad-small-tablet">
-                        <div class="row">
-                          <div class="one mobile sixth"><span class="prefix">@</span></div>
-                          <div class="five mobile sixths">
-                            <input id="twitter" type="text" name="twitter" placeholder="username">
-                          </div>
-                        </div>
+                      <div class="one mobile sixth"><span class="prefix">@</span></div>
+                      <div class="five mobile sixths">
+                        <input id="twitter" type="text" name="twitter" placeholder="twitter handle">
                       </div>
-                      <div class="one half pad-left gap-bottom no-pad-small-tablet">
-                        <div class="row">
-                          <div class="three mobile fifths">
-                            <input type="text" name="sidereel" placeholder="pick username">
-                          </div>
-                          <div class="two mobile fifths"><span class="suffix">@example.com</span></div>
-                        </div>
+                    </div>
+                  </div>
+                  <div class="one half padded">
+                    <div class="row">
+                      <div class="three mobile fifths">
+                        <input type="text" name="sidereel" placeholder="desired username">
                       </div>
+                      <div class="two mobile fifths"><span class="suffix">@example.com</span></div>
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="one whole padded">Pick a thing:
-                    <ul class="radio-list">
+                  <div class="one whole padded">
+                    <label for="thing1">Radio Buttons:</label>
+                    <ul class="unstyled zero">
                       <li>
                         <input id="thing1" type="radio" name="things" checked="">
                         <label for="thing1" class="inline">Thing one</label>
@@ -263,45 +215,16 @@
                 </div>
                 <div class="row">
                   <div class="one whole padded">
-                    <button>Submit</button> 
-                    <button class="warning">Cancel</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="one whole padded">
-                    <input type="submit"> 
-                    <input type="reset" class="warning">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="double padded">
-                    <h6>Small</h6><a href="#" class="small button">Link</a> 
-                    <button class="small">Button</button> 
-                    <input type="submit" class="small"> 
-                    <input type="reset" class="small warning">
-                    <hr>
-                    <h6>Normal</h6><a href="#" class="button">Link</a> 
-                    <button>Button</button> 
-                    <input type="submit"> 
-                    <input type="reset" class="warning">
-                    <hr>
-                    <h6>Large</h6><a href="#" class="large button">Link</a> 
-                    <button class="large">Button</button> 
-                    <input type="submit" class="large"> 
-                    <input type="reset" class="large warning">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="one whole padded">
-                    <input type="checkbox" name="things" checked="">I want all the things!
+                    <input id="allthings" type="checkbox" name="things" checked="">
+                    <label for="allthings" class="inline"> I want all the things!</label>
                   </div>
                 </div>
               </fieldset>
             </form>
-            <div class="row">
-              <div class="one whole padded">
+            <div class="row gap-top">
+              <div class="one half padded">
+                <h4>Invalid Entry</h4>
                 <p class="invalid">
-                  <label>Invalid entry field label</label>
                   <input value="Invalid entry">
                 </p>
                 <div class="invalid row">
@@ -311,11 +234,9 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="one whole padded">
+              <div class="one half padded">
+                <h4>Validated Entry</h4>
                 <p class="valid">
-                  <label>Valid entry field label</label>
                   <input value="Valid entry">
                 </p>
                 <div class="valid row">
@@ -330,24 +251,20 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="message triple gap-top">
       <div class="container padded">
-        <div class="green callout">
-          <div class="row">
-            <div class="three fourths padded">
-              <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="orange button">Give me a shout <i class="icon-envelope-alt"></i></a> if you find it useful and have any feedback.</p>
-              <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="red button">filing an issue <i class="icon-github"></i></a> on Github.</p>
-            </div>
-            <div class="one fourth padded">
-              <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="large inline gapped tooltip"><i class="icon-envelope"></i></a></p>
-            </div>
+        <div class="row">
+          <div class="three fourths padded">
+            <p>GroundworkCSS is <b>100% free</b> and <b>open source</b>. <a href="mailto:groundwork@sidereel.com" class="red">Give me a shout <i class="icon-envelope"></i></a> if you find it useful and have any feedback.</p>
+            <p>Find a bug? Let me know by <a href="https://github.com/groundworkcss/groundwork/issues" target="_blank" class="asphalt">filing an issue <i class="icon-github-alt"></i></a> on Github.</p>
+          </div>
+          <div class="one fourth padded">
+            <p class="large padded align-center"><a href="http://twitter.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="blue large inline gapped"><i class="icon-twitter-sign"></i></a><a href="http://github.com/groundworkcss" target="_blank" title="@groundworkcss" style="text-decoration:none;" class="asphalt large inline gapped"><i class="icon-github-sign"></i></a><a href="mailto:groundwork@sidereel.com" title="groundwork@sidereel.com" style="text-decoration:none;" class="red large inline gapped"><i class="icon-envelope"></i></a></p>
           </div>
         </div>
       </div>
     </footer>
     <!-- scripts-->
-    <script type="text/javascript" src="../js/plugins/jquery.cycle2.js"></script>
-    <script type="text/javascript" src="../js/plugins/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="../js/groundwork.all.js"></script>
     <!-- google analytics-->
     <script type="text/javascript">

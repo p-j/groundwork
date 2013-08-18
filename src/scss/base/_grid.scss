@@ -1,12 +1,20 @@
 // =============================================
 //    Fractional grid system by Gary Hepting
-//          Last Updated:2013-4-24
+//          Last Updated:2013-8-16
 //
 //    ***** REQUIRES BORDER BOX SIZING *****
 //
 // =============================================
 
-
+$numerators:          "one"    "two"    "three"  "four"    "five"   "six"    "seven"    "eight"   "nine"   "ten"    "eleven"    "twelve" !default;
+$denominators:        "whole"  "half"   "third"  "fourth"  "fifth"  "sixth"  "seventh"  "eighth"  "ninth"  "tenth"  "eleventh"  "twelfth" !default;
+$denominators-plural: "wholes" "halves" "thirds" "fourths" "fifths" "sixths" "sevenths" "eighths" "ninths" "tenths" "elevenths" "twelfths" !default;
+$grid-classes:        true !default;
+$adapter-classes:     true !default;
+$grid-adapters:       $one-whole $one-half $one-third $one-fourth $one-fifth !default;
+$container-width:     1200px !default;
+$gutter:              10px !default;
+$responsive:          true !default;
 
 
 ///////////////////////////////////////////////
@@ -15,9 +23,9 @@
 
 %container {
   @if $responsive {
-    max-width: $max-width;
+    max-width: $container-width;
   } @else {
-    width: $max-width;
+    width: $container-width;
   }
   margin: 0 auto;
 }
