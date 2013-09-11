@@ -14,12 +14,12 @@
     "Gruntfile.coffee",
     "*.json",
     "robots.txt",
-    "node_modules",
-    "components"
+    "node_modules"
   ],
   "dependencies": {
     "jquery": "~1.10.2",
     "modernizr": "~2.6.2",
-    "jquery-cycle2": "*"
+    "jquery-cycle2": "*",
+    "magnific-popup": ">=0.8.5"
   }
 }
